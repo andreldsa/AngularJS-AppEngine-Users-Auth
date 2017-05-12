@@ -1,0 +1,15 @@
+<div layout-wrap layout="row" layout-align="center">
+	<div md-whiteframe flex="80" ng-controller="AppController as ctrl">
+		<md-toolbar layout-align="center" layout-padding>{{ctrl.user.nickname}}</md-toolbar>
+		<md-content layout-padding layout-align="center" layout="column">
+			<md-button ng-click="ctrl.login()" ng-if="!ctrl.user">
+				<md-icon>person</md-icon>
+				Sign in
+			</md-button>
+            <md-button ng-click="ctrl.logout()" ng-if="ctrl.user">
+                <md-icon>person</md-icon>
+                Log out
+            </md-button>
+		</md-content>
+	</div>
+</div>
